@@ -1,8 +1,4 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { Heart, Users, Building, GraduationCap, Phone, Mail, MapPin, Calendar, Award, Target, CheckCircle, Star, Handshake } from "lucide-react";
 
 const Index = () => {
@@ -13,9 +9,9 @@ const Index = () => {
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-5xl mx-auto text-center">
-                        <Badge className="mb-6 bg-white/20 text-white border-white/30 text-lg px-6 py-2">
+                        <span className="inline-block mb-6 bg-white/20 text-white border-white/30 text-lg px-6 py-2 rounded-full font-semibold">
                             2025 Airdrie City Council Candidate
-                        </Badge>
+                        </span>
                         <h1 className="text-6xl font-bold mb-6 leading-tight">Maulik Shah</h1>
                         <h2 className="text-3xl mb-8 text-blue-100 font-medium">Your Voice on Airdrie City Council</h2>
                         <p className="text-xl mb-10 leading-relaxed max-w-4xl mx-auto">
@@ -24,12 +20,8 @@ const Index = () => {
                             I'm ready to bring practical solutions and fresh perspectives to City Council.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-3">
-                                My Vision for Airdrie
-                            </Button>
-                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-800 text-lg px-8 py-3">
-                                Join the Campaign
-                            </Button>
+                            <a href="#vision" className="bg-white text-blue-800 hover:bg-blue-50 text-lg px-8 py-3 rounded shadow font-semibold transition">My Vision for Airdrie</a>
+                            <a href="#contact" className="border border-white text-white hover:bg-white hover:text-blue-800 text-lg px-8 py-3 rounded shadow font-semibold transition">Join the Campaign</a>
                         </div>
                     </div>
                 </div>
@@ -134,35 +126,27 @@ const Index = () => {
                         <h2 className="text-4xl font-bold mb-12 text-gray-800">Recognition & Partnerships</h2>
 
                         <div className="grid md:grid-cols-2 gap-8 mb-12">
-                            <Card className="bg-white shadow-lg">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-2xl">
-                                        <Handshake className="h-8 w-8 text-blue-600" />
-                                        Premier Danielle Smith
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 text-lg">
-                                        Premier Danielle Smith personally attended our Volunteer Appreciation Award Night in December 2024,
-                                        recognizing the outstanding community contributions organized by Maulik and the Indian Society of Airdrie.
-                                    </p>
-                                </CardContent>
-                            </Card>
+                            <div className="bg-white shadow-lg rounded-xl p-6">
+                                <div className="flex items-center gap-3 text-2xl font-bold mb-2">
+                                    <Handshake className="h-8 w-8 text-blue-600" />
+                                    Premier Danielle Smith
+                                </div>
+                                <p className="text-gray-600 text-lg">
+                                    Premier Danielle Smith personally attended our Volunteer Appreciation Award Night in December 2024,
+                                    recognizing the outstanding community contributions organized by Maulik and the Indian Society of Airdrie.
+                                </p>
+                            </div>
 
-                            <Card className="bg-white shadow-lg">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-2xl">
-                                        <Users className="h-8 w-8 text-green-600" />
-                                        Blake Richards, MP
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 text-lg">
-                                        Working alongside Member of Parliament Blake Richards on various community initiatives,
-                                        building strong federal-municipal partnerships that benefit all Airdrie residents.
-                                    </p>
-                                </CardContent>
-                            </Card>
+                            <div className="bg-white shadow-lg rounded-xl p-6">
+                                <div className="flex items-center gap-3 text-2xl font-bold mb-2">
+                                    <Users className="h-8 w-8 text-green-600" />
+                                    Blake Richards, MP
+                                </div>
+                                <p className="text-gray-600 text-lg">
+                                    Working alongside Member of Parliament Blake Richards on various community initiatives,
+                                    building strong federal-municipal partnerships that benefit all Airdrie residents.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-8">
@@ -183,152 +167,62 @@ const Index = () => {
                         <h2 className="text-5xl font-bold text-center mb-16 text-gray-800">Proven Track Record</h2>
 
                         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-16">
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-red-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <Heart className="h-7 w-7 text-red-500" />
-                                        Fight Against Hunger Drive
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-red-100 text-red-800">2025 Flagship Initiative</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Founded and leads this grassroots initiative providing free groceries to over 1,000 families every Saturday,
-                                        directly addressing food insecurity in our community.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Impact:</strong> 1,000+ families served • Weekly distribution • 100% volunteer-driven
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-gold-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <Award className="h-7 w-7 text-yellow-600" />
-                                        Volunteer Recognition Event
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-yellow-100 text-yellow-800">December 2024</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Organized a major community event attended by Premier Danielle Smith, honoring outstanding
-                                        volunteer contributions throughout Airdrie.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Recognition:</strong> Premier attendance • 50+ volunteers honored • Community-wide impact
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-blue-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <Users className="h-7 w-7 text-blue-500" />
-                                        Indian Society of Airdrie
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-blue-100 text-blue-800">Co-Founder</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Co-founded organization now supporting over 1,000 families with employment assistance,
-                                        social integration, and business networking opportunities.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Services:</strong> Job placement • Cultural events • Business support • Social integration
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-green-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <GraduationCap className="h-7 w-7 text-green-500" />
-                                        Free Dental Camp
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-green-100 text-green-800">Health Initiative</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Partnered with Tooth Pal Pediatric Dental to provide free dental care for underprivileged
-                                        children in Airdrie, ensuring access to essential healthcare.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Partnership:</strong> Professional dental clinic • Free services • Children focused
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-purple-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <Building className="h-7 w-7 text-purple-500" />
-                                        Business & Employment Expo
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-purple-100 text-purple-800">Economic Development</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Organized business networking events and employment fairs, helping newcomers find opportunities
-                                        and supporting local business growth.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Focus:</strong> Job creation • Business networking • Newcomer integration
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="hover:shadow-xl transition-all duration-300 border-l-4 border-l-orange-500">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 text-xl">
-                                        <Star className="h-7 w-7 text-orange-500" />
-                                        Cultural Bridge Building
-                                    </CardTitle>
-                                    <Badge className="w-fit bg-orange-100 text-orange-800">Community Unity</Badge>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-gray-600 mb-4">
-                                        Hosted unique Indo-Canadian Stampede Breakfasts, Diwali celebrations, and multicultural events
-                                        that bring diverse communities together.
-                                    </p>
-                                    <div className="text-sm text-gray-500">
-                                        <strong>Events:</strong> Stampede breakfast • Cultural festivals • Youth mentorship • Senior support
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <img
-                                    src="/lovable-uploads/1ac19aba-eee8-41d2-a7ea-a2c9c386b211.png"
-                                    alt="Spring Festival community celebration featuring cultural performances"
-                                    className="rounded-xl shadow-2xl w-full"
-                                />
+                            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-l-red-500">
+                                <div className="flex items-center gap-3 text-xl font-bold mb-2">
+                                    <Heart className="h-7 w-7 text-red-500" />
+                                    Fight Against Hunger Drive
+                                </div>
+                                <span className="inline-block w-fit bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">2025 Flagship Initiative</span>
+                                <p className="text-gray-600 mb-4">
+                                    Founded and leads this grassroots initiative providing free groceries to over 1,000 families every Saturday,
+                                    directly addressing food insecurity in our community.
+                                </p>
+                                <div className="text-sm text-gray-500">
+                                    <strong>Impact:</strong> 1,000+ families served • Weekly distribution • 100% volunteer-driven
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-3xl font-bold mb-6 text-gray-800">Building Bridges, Creating Opportunities</h3>
-                                <div className="space-y-4">
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">Organized unique Indo-Canadian Stampede Breakfast events that celebrate our diverse heritage</span>
-                                    </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">Facilitated over 200 employment opportunities for new immigrants and local residents</span>
-                                    </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">Provided mentorship programs for youth and comprehensive support services for seniors</span>
-                                    </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">Created business networking opportunities that have helped launch 15+ local enterprises</span>
-                                    </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <span className="text-gray-700">Distributed thermal appreciation bags to recognize and encourage ongoing volunteer service</span>
-                                    </div>
+
+                            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-l-gold-500">
+                                <div className="flex items-center gap-3 text-xl font-bold mb-2">
+                                    <Award className="h-7 w-7 text-yellow-600" />
+                                    Volunteer Recognition Event
+                                </div>
+                                <span className="inline-block w-fit bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">December 2024</span>
+                                <p className="text-gray-600 mb-4">
+                                    Organized a major community event attended by Premier Danielle Smith, honoring outstanding
+                                    volunteer contributions throughout Airdrie.
+                                </p>
+                                <div className="text-sm text-gray-500">
+                                    <strong>Recognition:</strong> Premier attendance • 50+ volunteers honored • Community-wide impact
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-l-blue-500">
+                                <div className="flex items-center gap-3 text-xl font-bold mb-2">
+                                    <Users className="h-7 w-7 text-blue-500" />
+                                    Indian Society of Airdrie
+                                </div>
+                                <span className="inline-block w-fit bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">Co-Founder</span>
+                                <p className="text-gray-600 mb-4">
+                                    Co-founded organization now supporting over 1,000 families with employment assistance,
+                                    social integration, and business networking opportunities.
+                                </p>
+                                <div className="text-sm text-gray-500">
+                                    <strong>Services:</strong> Job placement • Cultural events • Business support • Social integration
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-l-green-500">
+                                <div className="flex items-center gap-3 text-xl font-bold mb-2">
+                                    <GraduationCap className="h-7 w-7 text-green-500" />
+                                    Free Dental Camp
+                                </div>
+                                <span className="inline-block w-fit bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold mb-2">Health Initiative</span>
+                                <p className="text-gray-600 mb-4">
+                                    Organized and led a free dental camp for underprivileged children, providing essential dental care and education.
+                                </p>
+                                <div className="text-sm text-gray-500">
+                                    <strong>Impact:</strong> 200+ children served • Free dental checkups • Community health focus
                                 </div>
                             </div>
                         </div>
@@ -336,193 +230,17 @@ const Index = () => {
                 </div>
             </section>
 
-            {/* Vision & Platform */}
-            <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-16">
-                            <h2 className="text-5xl font-bold mb-6 text-gray-800">My Platform for Airdrie</h2>
-                            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Practical solutions backed by experience, focused on the issues that matter most to families
-                            </p>
-                        </div>
-
-                        <div className="grid lg:grid-cols-2 gap-12">
-                            <Card className="bg-white shadow-xl">
-                                <CardHeader className="bg-blue-600 text-white rounded-t-lg">
-                                    <CardTitle className="text-3xl flex items-center gap-3">
-                                        <Target className="h-8 w-8" />
-                                        Immediate Priorities
-                                    </CardTitle>
-                                    <CardDescription className="text-blue-100 text-lg">
-                                        Day-one commitments for urgent community needs
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="p-8">
-                                    <div className="space-y-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-blue-100 p-2 rounded-lg">
-                                                <Building className="h-6 w-6 text-blue-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Healthcare Infrastructure</h4>
-                                                <p className="text-gray-600">Work with Provincial Government to upgrade Airdrie Community Health Centre emergency services and reduce Calgary hospital trips</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-green-100 p-2 rounded-lg">
-                                                <Users className="h-6 w-6 text-green-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Senior Support Systems</h4>
-                                                <p className="text-gray-600">Establish comprehensive seniors helpline and expand support services for our aging population</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-purple-100 p-2 rounded-lg">
-                                                <MapPin className="h-6 w-6 text-purple-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Better Transportation</h4>
-                                                <p className="text-gray-600">Improve transportation to hospitals and labs, plus better internal Airdrie transit systems</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-orange-100 p-2 rounded-lg">
-                                                <Heart className="h-6 w-6 text-orange-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Food Security</h4>
-                                                <p className="text-gray-600">Expand food bank weekend availability and strengthen community food security programs</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="bg-white shadow-xl">
-                                <CardHeader className="bg-green-600 text-white rounded-t-lg">
-                                    <CardTitle className="text-3xl flex items-center gap-3">
-                                        <Star className="h-8 w-8" />
-                                        Long-term Vision
-                                    </CardTitle>
-                                    <CardDescription className="text-green-100 text-lg">
-                                        Building sustainable growth for Airdrie's future
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="p-8">
-                                    <div className="space-y-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-blue-100 p-2 rounded-lg">
-                                                <Target className="h-6 w-6 text-blue-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">"Airdrie First" Initiative</h4>
-                                                <p className="text-gray-600">Prioritize local resources, businesses, and talent while managing sustainable growth and property tax stability</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-green-100 p-2 rounded-lg">
-                                                <Building className="h-6 w-6 text-green-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Business & Economic Growth</h4>
-                                                <p className="text-gray-600">Enhanced local business support programs and employment opportunities for all residents</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-purple-100 p-2 rounded-lg">
-                                                <GraduationCap className="h-6 w-6 text-purple-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Youth Development</h4>
-                                                <p className="text-gray-600">Comprehensive education, employment, and youth empowerment programs for the next generation</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-orange-100 p-2 rounded-lg">
-                                                <Users className="h-6 w-6 text-orange-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-lg mb-2">Community Safety</h4>
-                                                <p className="text-gray-600">Enhanced domestic abuse prevention and support services for vulnerable community members</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </div>
+            {/* Contact Section */}
+            <footer id="contact" className="bg-primary text-white py-10">
+                <div className="container mx-auto text-center">
+                    <p className="mb-2 font-bold text-lg">Get in Touch</p>
+                    <p>I want to hear from you. Please reach out with your questions, concerns, and ideas.</p>
+                    <div className="mt-4">
+                        <a href="mailto:connect@vote4maulik.ca" className="hover:text-secondary text-lg">connect@vote4maulik.ca</a>
                     </div>
-                </div>
-            </section>
-
-            {/* Call to Action */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-5xl font-bold mb-8">Ready to Build Airdrie's Future Together?</h2>
-                        <p className="text-xl mb-10 leading-relaxed">
-                            Join me in creating positive change for our community. Whether you want to volunteer,
-                            learn more about my platform, or simply connect, I'd love to hear from you.
-                        </p>
-
-                        <div className="grid md:grid-cols-3 gap-8 mb-12">
-                            <div className="flex flex-col items-center gap-4 p-6 bg-white/10 rounded-xl">
-                                <Phone className="h-10 w-10 text-blue-200" />
-                                <h3 className="font-bold text-xl">Phone</h3>
-                                <p className="text-blue-200">Contact campaign office for details</p>
-                            </div>
-                            <div className="flex flex-col items-center gap-4 p-6 bg-white/10 rounded-xl">
-                                <Mail className="h-10 w-10 text-blue-200" />
-                                <h3 className="font-bold text-xl">Email</h3>
-                                <p className="text-blue-200">maulik@airdrieforward.ca</p>
-                            </div>
-                            <div className="flex flex-col items-center gap-4 p-6 bg-white/10 rounded-xl">
-                                <MapPin className="h-10 w-10 text-blue-200" />
-                                <h3 className="font-bold text-xl">Location</h3>
-                                <p className="text-blue-200">Proudly serving all of Airdrie</p>
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-50 text-xl px-12 py-4">
-                                Volunteer with Our Campaign
-                            </Button>
-                            <p className="text-blue-200">
-                                Authorized by Maulik Shah Campaign Team • Paid for by Maulik Shah Campaign
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12">
-                <div className="container mx-auto px-4">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold mb-4">Maulik Shah for Airdrie City Council</h3>
-                        <p className="text-gray-400 text-lg mb-6">
-                            Building Community • Creating Connections • Delivering Results
-                        </p>
-                        <Separator className="bg-gray-600 mb-6" />
-                        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500 mb-4">
-                            <span>Professional Engineer (P.Eng.)</span>
-                            <span>•</span>
-                            <span>Community Leader</span>
-                            <span>•</span>
-                            <span>Airdrie Resident Since 2015</span>
-                            <span>•</span>
-                            <span>Father of Four</span>
-                        </div>
-                        <p className="text-sm text-gray-500">
-                            © 2025 Maulik Shah Campaign. All rights reserved.
-                        </p>
+                    <div className="mt-8 border-t border-blue-800 pt-6">
+                        <p className="text-sm">Paid for by the Maulik Shah for Airdrie Campaign</p>
+                        <p className="text-sm">&copy; {new Date().getFullYear()} Maulik Shah for Airdrie. All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
